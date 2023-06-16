@@ -7,14 +7,13 @@
     <style>
       
 button {
-  display: block;
   margin: 10px auto;
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
   color: white;
   background-color: #333;
-  font-size: 18px;
+  font-size: 12px;
   cursor: pointer;
 }
 
@@ -83,6 +82,7 @@ button:hover {
 </head>
 <body>
     <button id="create-iframe">Create Window</button>
+    <button onclick="window.open('https://bsd.instructure.com/login?needs_cookies=1')">ESCAPE</button>
     <div class="options-menu">
         <h4>Settings</h4>
         <label for="url-select">Select URL:</label>
