@@ -1,0 +1,119 @@
+ <!DOCTYPE html>
+<html>
+<head>
+      <title>Canvas - Beaverton School District</title>
+  <link rel="icon" type="image/x-icon" href="https://zoophagous-beige-cobra.faviconkit.com/www.beaverton.k12.or.us/departments/teaching-learning/future-ready/canvas/256">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      background-image: url('background.jpg');
+      background-size: cover;
+      background-position: center;
+      font-family: Arial, sans-serif;
+    }
+    
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+    }
+    
+    .password-form {
+      max-width: 400px;
+      padding: 20px;
+      background-color: rgba(255, 255, 255, 0.8);
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+    
+    .password-form h2 {
+      text-align: center;
+    }
+    
+    .password-form label {
+      display: block;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+    
+    .password-form input[type="password"] {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 15px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+    }
+    
+    .password-form input[type="submit"] {
+      width: 100%;
+      padding: 10px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    
+    .password-form input[type="submit"]:hover {
+      background-color: #45a049;
+    }
+    
+    #iframeContainer {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 9999;
+    }
+    
+    iframe {
+      display: block;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+  </style>
+  <script>
+function validatePassword() {
+  var savedPasswords = ["fuck", "monkey", "shithead", "iwatchporn"]; // Add the additional passwords here
+  var password = document.getElementById("password").value;
+
+  if (!savedPasswords.includes(password)) {
+    alert("Incorrect password!");
+    return false;
+  }
+
+  var iframeContainer = document.createElement("div");
+  iframeContainer.id = "iframeContainer";
+
+  var iframe = document.createElement("iframe");
+  iframe.src = "./bsd/Jill/Students/472653.html";
+  iframe.setAttribute("allowfullscreen", "true");
+
+  iframeContainer.appendChild(iframe);
+  document.body.appendChild(iframeContainer);
+
+  return false; // Prevent form submission
+}
+
+  </script>
+</head>
+<body>
+  <div class="container">
+    <div class="password-form">
+      <h2>Shit</h2>
+      
+      <form onsubmit="return validatePassword();">
+        <label for="password">Password:</label>
+        <input type="password" id="password" required>
+        
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+  </div>
+</body>
+</html>
